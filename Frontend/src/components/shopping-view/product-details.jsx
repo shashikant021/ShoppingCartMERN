@@ -154,25 +154,25 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
                         alt={productDetails?.title}
                         width={600}
                         height={600}
-                        className="aspect-square w-full object-cover"
+                        className=" w-full object-cover"
                     />
                 </div>
-                <div className="">
+                <div className="overflow-auto">
                     <div>
-                        <h1 className="text-3xl font-extrabold">{productDetails?.title}</h1>
-                        <p className="text-muted-foreground text-2xl mb-5 mt-4">
+                        <h1 className="text-2xl font-extrabold">{productDetails?.title}</h1>
+                        <p className="text-muted-foreground mb-5 mt-4">
                             {productDetails?.description}
                         </p>
                     </div>
                     <div className="flex items-center justify-between">
                         <p
-                            className={`text-3xl font-bold text-primary ${productDetails?.salePrice > 0 ? "line-through" : ""
+                            className={`text-xl font-bold text-primary ${productDetails?.salePrice > 0 ? "line-through" : ""
                                 }`}
                         >
                             ${productDetails?.price}
                         </p>
                         {productDetails?.salePrice > 0 ? (
-                            <p className="text-2xl font-bold text-muted-foreground">
+                            <p className="text-xl font-bold text-muted-foreground">
                                 ${productDetails?.salePrice}
                             </p>
                         ) : null}
